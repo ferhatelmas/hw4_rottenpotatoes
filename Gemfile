@@ -8,6 +8,9 @@ gem 'rails', '3.1.0'
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
   gem 'sqlite3'
+end
+
+group :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels'
@@ -16,8 +19,9 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails'
   gem 'simplecov'
-  gem 'ZenTest'
+  gem 'ZenTest'  
 end
+
 group :production do
   gem 'pg'
 end

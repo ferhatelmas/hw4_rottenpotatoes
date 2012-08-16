@@ -30,6 +30,19 @@ class MoviesController < ApplicationController
     @movies = Movie.find_all_by_rating(@selected_ratings.keys, ordering)
   end
 
+  def find_with_same_director
+    id = params[:id]
+    @movie = Movie.find(id)
+
+    @director = @movie.director
+    unless @director.empty?
+      @movies = Movie.find_all_by_director(@director)
+    else
+      flash[:notice] = "'#{@movie.title}' has no director info"
+      redirect_to movies_path
+    end
+  end
+
   def new
     # default: render 'new' template
   end
