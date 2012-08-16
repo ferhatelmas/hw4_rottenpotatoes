@@ -1,6 +1,7 @@
 describe Movie do
 	before do 
-		@movie = FactoryGirl.build(:movie, title: 'The Passionate Developer', rating: 'G')
+		@movie = FactoryGirl.build(:movie, title: 'The Passionate Developer', 
+			rating: 'G', director: 'ferhat elmas')
 	end
 
 	subject { @movie }

@@ -3,6 +3,6 @@ FactoryGirl.define do
 		title 'A Title'
 		rating 'PG'
 		release_date { 5.years.ago }
-		director 'ferhat elmas'
+		director nil
 	end
 end
