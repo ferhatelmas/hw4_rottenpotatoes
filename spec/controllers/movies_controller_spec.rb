@@ -78,8 +78,6 @@ describe MoviesController do
 				find_director 
 				response.should_not render_template('find_with_same_director')
 			end
-
-
 		end
 
 	end
